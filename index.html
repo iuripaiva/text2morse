@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<!--FONTS-->
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+		
+		<!--CSS / FAVICON / ICONS-->
+	
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+		
+		<title>Text2Morse</title>
+	
+	<script>
+		var text = "";
+
+		function convert() {
+	
+			// Access and change binary variable
+			text = String(document.getElementById("text").value);
+
+			var alphabet = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z", " "]
+			var morse = ["-----",".----","..---","...--","....-",".....","-....","--...","---..","----.",".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--..", " / "]
+
+			var textArray = text.toUpperCase().split("");
+			var morseArray = []
+			for (var i = 0; i < textArray.length; i++){
+				for (var j = 0; j < alphabet.length; j++){
+					if (textArray[i] == alphabet[j]){
+						morseArray.push(morse[j]);
+					}
+				}
+			}
+
+			morseArray = morseArray.join(" ")
+
+			// If the array don't have any item, zero words will be counted.
+			if (textArray == ""){
+				document.getElementById("result").innerHTML = "Write something!";
+			}else{
+				document.getElementById("result").innerHTML = (morseArray);
+			}
+		}
+	</script>
+
+</head>
+
+<body style="text-align:center;">
+	
+	<main>
+		<section>
+			<div class="card">
+				<h1>
+					Text2Morse
+				</h1>
+				<hr>
+				<div class="content">
+					<article class="art1">
+						<h2>Type your text here: </h2>
+						<textarea type="text" id="text" rows="3"></textarea>
+						<button id="button" onclick="convert()">Convert</button>
+						<h2>Morse: </h2> <div id="result"></div>
+					</article>
+				</div>
+			</div>
+		</section>
+	</main>
+
+</body>
+
+</html>

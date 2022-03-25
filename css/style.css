@@ -1,0 +1,183 @@
+/* -----RESET AREA----- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 12px;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* -----STYLE AREA----- */
+
+:root {
+    --black: #150c1d;
+    --white: #e0e0e0;
+    --purple: #981fdf;
+    --roboto: 'Roboto', sans-serif;
+}
+
+body {
+	background: #171134;
+	font-family: var(--roboto);
+	color: var(--white);
+	background-image: url(https://media.istockphoto.com/vectors/smooth-wave-abstract-line-background-vector-id1323406043?k=20&m=1323406043&s=612x612&w=0&h=HlMLpMdJWJlnevDg38iMG_C_a-4PWvR8urQ8xiZD_-8=);
+	background-color:rgba(0, 0, 0, 0.5);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+main section{
+	height: 100vh;
+	width: 100vw;
+
+}
+
+section {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+}
+
+.card {
+	display: flex;
+	margin: auto;
+	min-width: 20rem;
+	max-width: 35rem;
+	height: 27rem;
+	border-radius: 5%;
+	flex-direction: column;
+	background-image: var(--bkg);
+	background-repeat: no-repeat;
+	background-position-y: -32vh;
+	background-size: cover;
+	background-color: var(--black);
+	box-shadow: 0 0 1rem black;
+	flex-grow: 2;
+}
+
+.content {
+	padding-left: 16%;
+	text-align: left;
+	display: flex;
+}
+
+textarea {
+	padding: .2rem;
+	border: .1rem solid var(--white);
+	margin-top: .5rem;
+	border-radius: 10px;
+	background-color: rgb(23,17,52);
+	font-size: 1rem;
+	font-family: var(--roboto);
+	font-weight: bold;
+	color: var(--purple);
+}
+
+#result{
+	margin-top: .5rem;
+	border-radius: 10px;
+	min-width: 13.5rem;
+	max-width: 13.5rem;
+	height: 4rem;
+	background-color: rgb(23,17,52);
+	font-size: 1rem;
+	font-family: var(--roboto);
+	font-weight: bold;
+	color: var(--purple);
+	border: .1rem solid var(--white);
+	padding: .3rem 0 0 .3rem;
+}
+
+button{
+	border-radius: 10px;
+	padding: .5rem;
+	font-size: 1rem;
+	font-family: var(--roboto);
+	font-weight: bold;
+	z-index: 1;
+	color: var(--purple);
+	background-color: rgb(23,17,52);
+	margin-left: 3vw;
+	margin-top: 2vh;
+	min-width: 8rem;
+	max-width: 6rem;
+	transition: all 0.5s ease;
+}
+
+button:hover{
+	color: white;
+	background-color: rgb(61, 45, 143);
+	transition: all 0.5s ease;
+}
+
+.art1{
+	margin-top: -0.5rem;
+	justify-content: center;
+}
+
+h1 {
+	z-index: 1;
+	font-weight: bold;
+	font-size: 2rem;
+	padding: 1rem;
+	margin-top: 2rem;
+	position: relative;
+}
+
+h2 {
+	z-index: 1;
+	font-weight: bold;
+	font-size: 1.3rem;
+	margin-top: 1rem;
+	position: relative;
+	color: var(--purple);
+}
+
+hr{
+	display: block; height: .1rem;
+    border: 0; border-top: .1rem solid var(--purple);
+    margin: 1em 0; padding: 0;
+	opacity: .2;
+}
